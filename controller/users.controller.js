@@ -13,5 +13,5 @@ export const signUp = async (req, res) => {
 
   return res
     .status(200)
-    .send({ message: '정상적으로 회원가입이 완료되었습니다.' }, data);
+    .send({ message: '정상적으로 회원가입이 완료되었습니다.', data });
 };
