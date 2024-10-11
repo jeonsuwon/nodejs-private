@@ -12,6 +12,6 @@ export const signUp = async (email, hashedPassword, name) => {
   return data;
 };
 
-export const findEmailById = async (email) => {
+export const findEmailByEmail = async (email) => {
   return await prisma.users.findFirst({ where: { email } });
 };

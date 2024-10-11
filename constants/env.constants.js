@@ -7,4 +7,6 @@ export const ENV_KEY = {
   USER: process.env.USER,
   PASSWORD: process.env.PASSWORD,
   DATABASE: process.env.DATABASE,
+  ACCESS_TOKEN_SECRET: process.env.ACCESS_TOKEN_SECRET,
+  REFRESH_TOKEN_SECRET: process.env.REFRESH_TOKEN_SECRET,
 };

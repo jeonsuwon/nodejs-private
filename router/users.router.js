@@ -48,4 +48,43 @@ const usersRouter = express();
  */
 usersRouter.post('/sign-up', usersController.signUp);
 
+//로그인
+/**
+ * @swagger
+ * paths:
+ *  /sign-in:
+ *    post:
+ *      summary: "User Sign-In"
+ *      description: "Allows a new user to sign up by providing the required information in the request body."
+ *      tags: [Users]
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            schema:
+ *              type: object
+ *              properties:
+ *                email:
+ *                  type: string
+ *                  example: "user@example.com"
+ *                password:
+ *                  type: string
+ *                  example: "password123"
+ *      responses:
+ *        "200":
+ *          description: "Sign-up successful"
+ *          content:
+ *            application/json:
+ *              schema:
+ *                type: object
+ *                properties:
+ *                  message:
+ *                    type: string
+ *                    example: "정상적으로 로그인이 완료되었습니다."
+ *                  data:
+ *                    type: object
+ *                    example: {"token": "eKDIkdfjoakIdkfjpekdkcjdkoIOdjOKJDFOlLDKFJKL"}
+ */
+usersRouter.post('/sign-in', usersController.signIn);
+
 export { usersRouter };
